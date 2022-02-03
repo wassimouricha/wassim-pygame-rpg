@@ -1,17 +1,8 @@
 import pygame
-pygame.init()
 
-# création de la fenetre du jeu
-pygame.display.set_mode((800, 600))
-pygame.display.set_caption("Wassim Pygame - RPG")
+from game import Game
 
-# boucle du jeu
-running = True
-
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-
-
-pygame.quit()
+if __name__ == '__main__':
+    pygame.init()
+    game = Game()
+    game.run()
